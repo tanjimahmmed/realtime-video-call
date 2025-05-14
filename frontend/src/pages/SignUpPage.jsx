@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {ShipWheelIcon} from 'lucide-react';
 import { Link } from 'react-router';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { signup } from '../lib/api';
 import useSignUp from '../hooks/useSignUp';
 
 const SignUpPage = () => {
@@ -11,7 +9,7 @@ const SignUpPage = () => {
     email: "",
     password: ""
   });
-  
+
   const {isPending, error, signupMutation} = useSignUp();
 
   const handleSignup = (e) => {
